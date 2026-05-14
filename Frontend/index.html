@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>SigmaGPT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<h2 class="logo">SigmaGPT</h2>
+
+<button class="new-chat" onclick="newChat()">+ New Chat</button>
+
+<ul id="threads"></ul>
+<div class="user-profile">
+
+<div id="username"></div>
+
+<button onclick="logout()" class="logout-btn">Logout</button>
+
+</div>
+
+</div>
+
+
+<!-- CHAT AREA -->
+
+<div class="chat-section">
+
+<div id="chat" class="chat-window"></div>
+
+
+<!-- CHAT INPUT BAR -->
+
+<div class="chat-input-bar">
+
+<button class="plus-btn">+</button>
+
+<textarea id="message" rows="1" placeholder="Message SigmaGPT..."></textarea>
+<button id="stopBtn" onclick="stopGeneration()" style="display:none;">■</button>
+<button class="send-btn" onclick="sendMessage()">↑</button>
+
+</div>
+
+</div>
+
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script>
+if(!localStorage.getItem("token")){
+window.location.href="login.html";
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
