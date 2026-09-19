@@ -1,7 +1,7 @@
 import express from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import User from "../models/User.js";
+import User from "../models/user.js";
 
 const router = express.Router();
 
@@ -96,7 +96,7 @@ message:"Invalid password"
 
 const token = jwt.sign(
 {userId:user._id},
-"secretkey",
+process.env.JWT_SECRET || "secretkey",
 {expiresIn:"7d"}
 );
 

@@ -61,6 +61,11 @@ border-radius:6px;
 background:#2a2b32;
 }
 
+.thread-item.active{
+background:#343541;
+border-left:3px solid #19c37d;
+}
+
 .delete-icon{
 opacity:0.5;
 cursor:pointer;
@@ -215,6 +220,22 @@ font-size:18px;
 .send-btn:hover{
 background:#16a46b;
 }
+
+#stopBtn{
+background:#ef4444;
+border:none;
+color:white;
+border-radius:8px;
+width:36px;
+height:36px;
+cursor:pointer;
+font-size:14px;
+margin:0 8px;
+}
+
+#stopBtn:hover{
+background:#dc2626;
+}
 .chat-input-bar textarea{
 flex:1;
 background:transparent;
@@ -227,6 +248,7 @@ resize:none;
 max-height:150px;
 overflow-y:auto;
 font-family:inherit;
+min-height:24px;
 }
 /* CODE BLOCK */
 

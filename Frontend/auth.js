@@ -40,6 +40,7 @@ alert("Signup failed");
 
 }catch(err){
 
+console.error("Signup error:", err);
 alert("Server error");
 
 }
@@ -86,6 +87,7 @@ alert(data.message || "Login failed");
 
 }catch(err){
 
+console.error("Login error:", err);
 alert("Server error");
 
 }

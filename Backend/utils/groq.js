@@ -3,17 +3,20 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-export const askGroq = async (message) => {
+export const askGroq = async (message, conversationHistory = []) => {
 
   try {
+
+    const messages = [
+      ...conversationHistory,
+      { role: "user", content: message }
+    ];
 
     const response = await axios.post(
       "https://api.groq.com/openai/v1/chat/completions",
       {
-        model: "llama-3.1-8b-instant",
-        messages: [
-          { role: "user", content: message }
-        ]
+        model: "openai/gpt-oss-20b",
+        messages: messages
       },
       {
         headers: {
